@@ -1,0 +1,69 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur40" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="blur18" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+    <linearGradient id="peach" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE3C2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F6B3A9" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="lavender" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D8CCFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#9C7CF2" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="glassPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C9B8FF" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#F7F1E9"/>
+
+  <g opacity="0.75" filter="url(#blur40)">
+    <ellipse cx="230" cy="260" rx="250" ry="200" fill="#FFD4B0"/>
+    <ellipse cx="1310" cy="180" rx="340" ry="210" fill="#C9BCFF"/>
+    <ellipse cx="1080" cy="820" rx="380" ry="220" fill="#F4C9E8"/>
+    <ellipse cx="430" cy="820" rx="300" ry="200" fill="#FFC58F" opacity="0.55"/>
+  </g>
+
+  <g opacity="0.55">
+    <rect x="70" y="-40" width="14" height="880" rx="7" fill="#FFF9F0"/>
+    <rect x="170" y="-40" width="7" height="880" rx="3.5" fill="#FFFDF9" opacity="0.75"/>
+    <rect x="290" y="-40" width="5" height="880" rx="2.5" fill="#FFFDF9" opacity="0.65"/>
+  </g>
+
+  <g opacity="0.45" filter="url(#blur18)">
+    <ellipse cx="120" cy="720" rx="120" ry="70" fill="#FFF2E2"/>
+    <ellipse cx="1510" cy="740" rx="150" ry="90" fill="#D8C2FF"/>
+  </g>
+
+  <!-- soft bokeh lights -->
+  <g opacity="0.42" filter="url(#blur18)">
+    <circle cx="330" cy="360" r="36" fill="#FFF6EC"/>
+    <circle cx="1520" cy="250" r="52" fill="#EEDCFF"/>
+    <circle cx="1240" cy="610" r="30" fill="#FFE4D3"/>
+    <circle cx="620" cy="880" r="28" fill="#FFF8F1"/>
+  </g>
+
+  <!-- blurred plant on left -->
+  <g opacity="0.58" filter="url(#blur18)" fill="#6E875B">
+    <path d="M44 1000 C90 760, 105 500, 124 140" stroke="#5C7953" stroke-width="24" stroke-linecap="round"/>
+    <path d="M86 760 C20 710, 6 640, 38 584 C110 600, 128 664, 86 760Z"/>
+    <path d="M110 640 C170 584, 214 574, 248 612 C227 686, 165 700, 110 640Z"/>
+    <path d="M96 520 C35 466, 28 402, 63 370 C130 405, 140 464, 96 520Z"/>
+    <path d="M120 360 C178 308, 228 300, 260 337 C240 410, 178 425, 120 360Z"/>
+    <path d="M132 230 C84 178, 84 130, 118 103 C174 134, 179 182, 132 230Z"/>
+  </g>
+
+  <!-- warm foreground foliage on right -->
+  <g opacity="0.34" filter="url(#blur18)" fill="#7C8B67">
+    <path d="M1570 1000 C1510 820, 1526 600, 1605 420" stroke="#6D7D59" stroke-width="30" stroke-linecap="round"/>
+    <path d="M1554 790 C1494 740, 1480 672, 1512 637 C1582 666, 1604 730, 1554 790Z"/>
+    <path d="M1572 640 C1610 585, 1644 565, 1678 590 C1662 664, 1624 685, 1572 640Z"/>
+  </g>
+
+  <!-- subtle architectural glow on right -->
+  <g opacity="0.34" filter="url(#blur40)">
+    <path d="M1120 70 C1310 20, 1530 80, 1600 210 L1600 520 C1450 440, 1270 410, 1140 330 C1090 250, 1080 140, 1120 70Z" fill="url(#lavender)"/>
+    <path d="M920 760 C1050 620, 1210 580, 1390 630 C1480 670, 1530 760, 1600 850 L1600 1000 L900 1000 C860 920, 860 820, 920 760Z" fill="url(#peach)"/>
+  </g>
+</svg>

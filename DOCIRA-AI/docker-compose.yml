@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  # ── PostgreSQL ──────────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    container_name: documind_postgres
+    environment:
+      POSTGRES_DB: documind
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d documind"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Qdrant Vector DB ────────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: documind_qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Ollama (Local LLM) ──────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: documind_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Models are pulled manually after first start
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  ollama_data:
